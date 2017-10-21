@@ -9,7 +9,7 @@ namespace ComicBookGallery.Models {
 
     public int Id { get; set; }
     public string SeriesTitle { get; set; }
-    public int Issueumber { get; set; }
+    public int IssueNumber { get; set; }
     public string DescriptionHtml { get; set; }
     public Artist[] Artists { get; set; }
     public bool Favorite { get; set; }
@@ -17,7 +17,7 @@ namespace ComicBookGallery.Models {
     public string DisplayText {
       get
       {
-        return SeriesTitle + " #" + Issueumber;
+        return SeriesTitle + " #" + IssueNumber;
       }
     }
 
@@ -26,7 +26,7 @@ namespace ComicBookGallery.Models {
       get
       {
         return SeriesTitle.Replace(" ", "-")
-          .ToLower() + "-" + Issueumber + ".jpg";
+          .ToLower() + "-" + IssueNumber + ".jpg";
       }
     }
 

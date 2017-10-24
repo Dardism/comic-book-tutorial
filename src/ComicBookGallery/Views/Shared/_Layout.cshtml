@@ -27,7 +27,15 @@
         </div>
     </div>
 
-    <div class="container body-content">
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar) {
+      <div class="backbar">
+        <div class="container">
+          @Html.ActionLink("Return to list", "Index", null, new { @class = "btn btn-default" })
+          <!-- orignalcode -> <a class="btn btn-default" href="/">Return to List</a>-->
+        </div>
+      </div>
+    }
+      <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>

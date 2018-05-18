@@ -20,7 +20,6 @@ namespace ComicBookGallery.Controllers {
       return View(comicBooks);
     }
 
-
     public ActionResult Detail(int? id) {
 
       if(id == null){
